@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zero-Code Site — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">ZeroCode</div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to the Zero-Code Demo Site</h1>
+      <p>A fully client-side, multi-page demo using only HTML, CSS and JavaScript.</p>
+      <div class="cta-row">
+        <button onclick="quickLogin('user')">Try User Dashboard</button>
+        <button onclick="quickLogin('admin')">Try Admin Dashboard</button>
+      </div>
+    </section>
+
+    <section id="features" class="cards">
+      <article class="card">
+        <h3>Zero backend</h3>
+        <p>Everything runs in the browser. Authentication is simulated using localStorage.</p>
+      </article>
+      <article class="card">
+        <h3>Admin & User</h3>
+        <p>Two separate dashboards with role-guarding and simulated data.</p>
+      </article>
+      <article class="card">
+        <h3>Responsive</h3>
+        <p>Simple responsive layout for desktop and mobile screens.</p>
+      </article>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>How it works</h2>
+      <ol>
+        <li>On this home page choose a role (Admin/User).</li>
+        <li>The site stores the chosen role in localStorage and opens the matching dashboard.</li>
+        <li>Dashboards check role and will redirect to Home if not permitted.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">© ZeroCode Demo — no backend required</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

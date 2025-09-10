@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">Admin</div>
+      <nav>
+        <a href="admin.html" class="active">Overview</a>
+        <a href="#users">Users</a>
+        <a href="#settings">Settings</a>
+        <a href="index.html" onclick="logout(event)">Logout</a>
+      </nav>
+    </aside>
+
+    <div class="main-area">
+      <header class="dash-topbar">
+        <h2>Admin Dashboard</h2>
+        <div class="top-actions">
+          <span id="currentRole"></span>
+        </div>
+      </header>
+
+      <section class="dash-grid">
+        <div class="stat card">
+          <h4>Total Users</h4>
+          <p id="totalUsers">—</p>
+        </div>
+        <div class="stat card">
+          <h4>Active Sessions</h4>
+          <p id="activeSessions">—</p>
+        </div>
+        <div class="stat card">
+          <h4>Open Tickets</h4>
+          <p id="openTickets">—</p>
+        </div>
+      </section>
+
+      <section id="users" class="panel">
+        <h3>Users</h3>
+        <table class="table">
+          <thead>
+            <tr><th>ID</th><th>Name</th><th>Role</th><th>Action</th></tr>
+          </thead>
+          <tbody id="usersTable"></tbody>
+        </table>
+      </section>
+
+      <section id="settings" class="panel">
+        <h3>Settings</h3>
+        <label class="switch">
+          <input id="maintenanceToggle" type="checkbox" onchange="toggleMaintenance(this.checked)">
+          <span>Maintenance mode</span>
+        </label>
+        <p id="maintenanceState">Off</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    

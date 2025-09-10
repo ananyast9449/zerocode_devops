@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">User</div>
+      <nav>
+        <a href="user.html" class="active">My Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#tasks">Tasks</a>
+        <a href="index.html" onclick="logout(event)">Logout</a>
+      </nav>
+    </aside>
+
+    <div class="main-area">
+      <header class="dash-topbar">
+        <h2>User Dashboard</h2>
+        <div class="top-actions">
+          <span id="uCurrentRole"></span>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h3>Welcome Back, <span id="userName">Guest</span></h3>
+        <p>Here's a simple task list you can play with — stored locally in your browser.</p>
+        <div class="task-row">
+          <input id="taskInput" placeholder="Add a task..." />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="taskList" class="task-list"></ul>
+      </section>
+
+      <section id="profile" class="panel">
+        <h3>Profile</h3>
+        <p>Email: demo@zerocode.local</p>
+        <p>Role: <strong id="profileRole">User</strong></p>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
